@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+  font-family: 'Source Sans Pro', sans-serif;
+  list-style: none;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  width: 100%;
+}
+
+.card-odd-color:nth-child(even) {
+  background-color: rgb(230, 230, 230);
+}
+
+.bg-image {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.644);
+    filter: drop-shadow(8px 8px 10px rgba(0, 0, 0, 0.699));
+  }
+}
+
+.btn {
+  transition: all 0.5s ease-in-out;
+  color: #fff;
+}
+
+.hover {
+  &:hover {
+    opacity: 0.8;
+    transition: opacity 0.4s ease-in-out;
+  }
+}
